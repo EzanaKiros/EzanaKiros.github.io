@@ -60,7 +60,15 @@ def game():
     if go_again_Low == "again":
         game()
     elif go_again_Low == "done":
-        print("goodbye")
+        print("Goodbye")
+    while go_again != "again" and go_again != "done":
+        print("That is an invalid answer, let us try again:")
+        go_again = input("Type DONE to close, and AGAIN to try again: ")
+        go_again_Low = go_again.lower()
+        if go_again_Low == "again":
+            game()
+        elif go_again_Low == "done":
+            print("Goodbye")
 
 game()
 
